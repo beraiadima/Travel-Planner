@@ -144,12 +144,14 @@ curl -X PATCH http://localhost:8000/api/trips/projects/1/places/1 \
 
 All in `envs/dev.env`. For local dev everything is already set up, you don't need to change anything.
 
+### Django
 ```env
-# Django
 DEBUG=True
 SECRET_KEY=your-secret-key
+```
 
-# PostgreSQL
+### PostgreSQL
+```env
 POSTGRES_DB=name_db
 POSTGRES_USER=name_user
 POSTGRES_PASSWORD=password
