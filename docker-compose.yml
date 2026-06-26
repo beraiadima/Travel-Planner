@@ -1,0 +1,26 @@
+services:
+  travel_planner:
+    build: .
+    env_file:
+      - envs/dev.env
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      travel_planner_db:
+        condition: service_healthy
+  travel_planner_db:
+    image: postgres:16
+    env_file:
+      - envs/dev.env
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

@@ -1,0 +1,24 @@
+# python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# virtual environment
+venv/
+.venv/
+
+# environments
+envs/*.env
+
+# postgres data
+postgres_data/
+
+# os
+.DS_Store
+Thumbs.db
+
+# poetry
+poetry.lock
