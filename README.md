@@ -142,17 +142,17 @@ curl -X PATCH http://localhost:8000/api/trips/projects/1/places/1 \
 
 ## Environment variables
 
-All in envs/dev.env. For local dev everything is already set up, you don't need to change anything.
-For example:
+All in `envs/dev.env`. For local dev everything is already set up, you don't need to change anything.
 
-# django
+```env
+# Django
 DEBUG=True
 SECRET_KEY=your-secret-key
 
-# postgres
+# PostgreSQL
 POSTGRES_DB=name_db
 POSTGRES_USER=name_user
 POSTGRES_PASSWORD=password
 POSTGRES_HOST=name_host
 POSTGRES_PORT=5432
----
+```
